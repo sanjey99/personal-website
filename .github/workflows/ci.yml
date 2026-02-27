@@ -1,0 +1,27 @@
+name: website-ci
+
+on:
+  push:
+    paths:
+      - "projects/personal_website/**"
+  pull_request:
+    paths:
+      - "projects/personal_website/**"
+
+jobs:
+  build-and-audit:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: projects/personal_website
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: projects/personal_website/package-lock.json
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run build
+      - run: npm audit --audit-level=high
