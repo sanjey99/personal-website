@@ -1,21 +1,45 @@
 const projects = [
   {
+    name: "Polymarket Arbitrage Bot",
+    stack: "Python, Risk Engine, CLOB Integration, Telegram Controls",
+    impact:
+      "Built a paper-first, risk-controlled trading system with canary execution gates, telemetry, and command-based controls.",
+    link: "https://github.com/sanjey99/polymarket-arbitrage-bot",
+  },
+  {
     name: "HarvestChain",
     stack: "React, Tailwind, Vite, Flask, Python, MongoDB, XRPL, Solidity",
     impact:
       "Global 5th at APRU x Google Tech Policy Hackathon 2025; built SSI-enabled blockchain flow for fairer fish price locking.",
+    link: "https://github.com/sanjey99/harvestchain",
   },
   {
-    name: "PRISM",
+    name: "PRISM (HacX 2025)",
     stack: "React, Node.js, Express, TypeScript, Socket.IO",
     impact:
-      "2nd place at HacX 2025 (HTX x Microsoft); real-time prison transport telemetry and audit logging across 15+ APIs.",
+      "2nd place at HacX 2025 (HTX x Microsoft); real-time prison transport management with telemetry and audit logging.",
+    link: "",
+  },
+  {
+    name: "Intern Analytics Project",
+    stack: "Python, Pandas, NumPy, Excel",
+    impact:
+      "Built internship analytics pipelines and workflow visualizations, contributing to a 30% systems-efficiency improvement.",
+    link: "",
   },
   {
     name: "WorldQuant Championship 2025",
     stack: "Alpha Modelling, Backtesting",
     impact:
-      "Top 20% + Gold Award globally with 10,000 points; optimized alphas via decay, neutralization, and risk constraints.",
+      "Top 20% + Gold Award globally with 10,000 points; optimized alpha signals with decay, neutralization, and risk controls.",
+    link: "",
+  },
+  {
+    name: "HomeCast",
+    stack: "Software Engineering Project, Web Platform, API Integration",
+    impact:
+      "Built a real-estate style platform that pulls property and amenity APIs to support broker-like discovery and filtering.",
+    link: "",
   },
 ];
 
@@ -98,12 +122,24 @@ export default function Home() {
 
         <section id="projects" className="py-14">
           <h2 className="mb-6 text-3xl font-semibold">Featured Projects</h2>
-          <div className="grid gap-4 md:grid-cols-3">
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {projects.map((p) => (
               <article key={p.name} className="glass rounded-2xl p-5">
                 <h3 className="text-xl font-semibold">{p.name}</h3>
                 <p className="mt-2 text-sm text-cyan-100/80">{p.stack}</p>
                 <p className="mt-3 text-sm text-white/85">{p.impact}</p>
+                {p.link ? (
+                  <a
+                    href={p.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-4 inline-block text-sm text-cyan-200 underline underline-offset-4"
+                  >
+                    View project
+                  </a>
+                ) : (
+                  <p className="mt-4 text-xs text-white/50">Link available on request</p>
+                )}
               </article>
             ))}
           </div>
