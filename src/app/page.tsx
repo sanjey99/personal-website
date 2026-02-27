@@ -4,6 +4,8 @@ const projects = [
     stack: "Python, Risk Engine, CLOB Integration, Telegram Controls",
     impact:
       "Built a paper-first, risk-controlled trading system with canary execution gates, telemetry, and command-based controls.",
+    metric: "Live canary + control bot",
+    tag: "Trading Systems",
     link: "https://github.com/sanjey99/polymarket-arbitrage-bot",
   },
   {
@@ -11,6 +13,8 @@ const projects = [
     stack: "React, Tailwind, Vite, Flask, Python, MongoDB, XRPL, Solidity",
     impact:
       "Global 5th at APRU x Google Tech Policy Hackathon 2025; built SSI-enabled blockchain flow for fairer fish price locking.",
+    metric: "Global 5th (APRU x Google)",
+    tag: "Hackathon",
     link: "https://github.com/sanjey99/harvestchain",
   },
   {
@@ -18,6 +22,8 @@ const projects = [
     stack: "React, Node.js, Express, TypeScript, Socket.IO",
     impact:
       "2nd place at HacX 2025 (HTX x Microsoft); real-time prison transport management with telemetry and audit logging.",
+    metric: "2nd place @ HacX 2025",
+    tag: "GovTech / IoT",
     link: "",
   },
   {
@@ -25,6 +31,8 @@ const projects = [
     stack: "Python, Pandas, NumPy, Excel",
     impact:
       "Built internship analytics pipelines and workflow visualizations, contributing to a 30% systems-efficiency improvement.",
+    metric: "30% efficiency improvement",
+    tag: "Internship",
     link: "",
   },
   {
@@ -32,6 +40,8 @@ const projects = [
     stack: "Alpha Modelling, Backtesting",
     impact:
       "Top 20% + Gold Award globally with 10,000 points; optimized alpha signals with decay, neutralization, and risk controls.",
+    metric: "Top 20% + Gold",
+    tag: "Quant",
     link: "",
   },
   {
@@ -39,6 +49,8 @@ const projects = [
     stack: "Software Engineering Project, Web Platform, API Integration",
     impact:
       "Built a real-estate style platform that pulls property and amenity APIs to support broker-like discovery and filtering.",
+    metric: "API-driven property discovery",
+    tag: "Software Engineering",
     link: "",
   },
 ];
@@ -124,7 +136,16 @@ export default function Home() {
           <h2 className="mb-6 text-3xl font-semibold">Featured Projects</h2>
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {projects.map((p) => (
-              <article key={p.name} className="glass rounded-2xl p-5">
+              <article
+                key={p.name}
+                className="glass rounded-2xl p-5 transition-all duration-200 hover:-translate-y-1 hover:border-cyan-300/30 hover:shadow-[0_0_0_1px_rgba(56,189,248,0.2)]"
+              >
+                <div className="mb-3 flex items-center justify-between gap-2">
+                  <span className="rounded-full border border-cyan-300/30 px-2 py-0.5 text-[10px] uppercase tracking-wider text-cyan-100/90">
+                    {p.tag}
+                  </span>
+                  <span className="text-[11px] text-white/60">{p.metric}</span>
+                </div>
                 <h3 className="text-xl font-semibold">{p.name}</h3>
                 <p className="mt-2 text-sm text-cyan-100/80">{p.stack}</p>
                 <p className="mt-3 text-sm text-white/85">{p.impact}</p>
@@ -165,6 +186,7 @@ export default function Home() {
           <div className="glass rounded-2xl p-5 text-sm text-white/85">
             <p>Email: sanjeychrysh@gmail.com</p>
             <p>GitHub: github.com/sanjey99</p>
+            <p>LinkedIn: linkedin.com/in/sanjey99</p>
             <p>Location: Singapore</p>
           </div>
         </section>
