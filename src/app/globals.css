@@ -44,3 +44,47 @@ a {
   border: 1px solid rgba(255, 255, 255, 0.12);
   backdrop-filter: blur(8px);
 }
+
+.monolith-shell {
+  position: relative;
+  width: min(420px, 78vw);
+  height: min(520px, 68vh);
+  border-radius: 28px;
+  background: linear-gradient(180deg, #0f172a 0%, #0a1020 52%, #070b14 100%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.6), inset 0 0 0 1px rgba(125, 211, 252, 0.12);
+  overflow: hidden;
+}
+
+.monolith-scan {
+  position: absolute;
+  inset: -40% -10% auto -10%;
+  height: 40%;
+  background: linear-gradient(180deg, rgba(125, 211, 252, 0), rgba(125, 211, 252, 0.22), rgba(125, 211, 252, 0));
+  animation: scan 4.2s linear infinite;
+}
+
+.order-layer {
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  height: 14px;
+  border-radius: 999px;
+  opacity: 0.8;
+  transform-origin: left;
+  animation: pulse 2.8s ease-in-out infinite;
+}
+
+@keyframes scan {
+  from { transform: translateY(0%); }
+  to { transform: translateY(360%); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scaleX(0.72); opacity: 0.65; }
+  50% { transform: scaleX(1); opacity: 1; }
+}
+
+@media (max-width: 768px) {
+  .glass { backdrop-filter: blur(4px); }
+}

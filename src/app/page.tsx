@@ -129,14 +129,48 @@ export default function Home() {
               </div>
             </div>
             <div className="relative min-h-[320px] bg-gradient-to-br from-[#121a30] via-[#121a2b] to-[#211536] p-6">
-              <div className="h-full rounded-2xl border border-white/20 bg-gradient-to-b from-[#111a31] to-[#0a1020] p-4">
-                <p className="mb-4 font-mono text-xs text-cyan-200/80">
-                  /portfolio/scene
-                </p>
-                <div className="grid h-[85%] place-items-center rounded-xl border border-white/10 bg-gradient-to-b from-[#1a2c53] via-[#375f92] to-[#9dd5ff] text-xs text-white/90">
-                  Apple-style cinematic scroll scene
+              <div className="flex h-full items-center justify-center rounded-2xl border border-white/20 bg-gradient-to-b from-[#111a31] to-[#0a1020] p-4">
+                <div className="monolith-shell">
+                  <div className="monolith-scan" />
+                  <div className="absolute left-0 right-0 top-3 text-center font-mono text-[11px] text-cyan-200/80">
+                    ORDER BOOK MONOLITH
+                  </div>
+
+                  <div className="order-layer top-[18%] bg-cyan-300/45" style={{ animationDelay: "0s" }} />
+                  <div className="order-layer top-[24%] bg-cyan-300/35" style={{ animationDelay: "0.2s" }} />
+                  <div className="order-layer top-[30%] bg-cyan-300/25" style={{ animationDelay: "0.35s" }} />
+
+                  <div className="absolute left-[10%] right-[10%] top-[44%] h-[2px] bg-white/35" />
+                  <div className="absolute left-[10%] right-[10%] top-[46%] text-center font-mono text-[11px] text-white/70">
+                    spread + edge detection
+                  </div>
+
+                  <div className="order-layer top-[58%] bg-violet-300/25" style={{ animationDelay: "0.1s" }} />
+                  <div className="order-layer top-[64%] bg-violet-300/35" style={{ animationDelay: "0.25s" }} />
+                  <div className="order-layer top-[70%] bg-violet-300/45" style={{ animationDelay: "0.4s" }} />
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-14">
+          <div className="glass rounded-3xl p-6 md:p-10">
+            <p className="text-xs uppercase tracking-[0.2em] text-cyan-200/80">Cinematic Story</p>
+            <h2 className="mt-3 text-3xl font-semibold">From market noise to disciplined execution</h2>
+            <div className="mt-8 grid gap-6 md:grid-cols-4">
+              {[
+                ["01", "Noise", "High-volume, conflicting signals."],
+                ["02", "Discovery", "Order flow reveals structure."],
+                ["03", "Edge", "Probability imbalance detected."],
+                ["04", "Execution", "Risk-first, controlled action."],
+              ].map(([idx, t, d]) => (
+                <div key={idx} className="rounded-2xl border border-white/10 bg-white/5 p-4">
+                  <p className="font-mono text-xs text-cyan-200/80">{idx}</p>
+                  <p className="mt-2 font-semibold">{t}</p>
+                  <p className="mt-1 text-sm text-white/70">{d}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
