@@ -24,7 +24,7 @@ const projects = [
       "2nd place at HacX 2025 (HTX x Microsoft); real-time prison transport management with telemetry and audit logging.",
     metric: "2nd place @ HacX 2025",
     tag: "GovTech / IoT",
-    link: "",
+    link: "https://github.com/sanjey99/PRISM-hacx",
   },
   {
     name: "Intern Analytics Project",
