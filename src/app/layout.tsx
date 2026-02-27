@@ -13,9 +13,25 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Sanjeyan Chrysharnthan | Computer Engineering @ NTU",
+  title: "Sanjey | Computer Engineering @ NTU",
   description:
-    "Portfolio of Sanjeyan Chrysharnthan — NTU Computer Engineering student building quant-ready systems, automation tools, and full-stack products.",
+    "Portfolio of Sanjey — NTU Computer Engineering student building quant-ready systems, automation tools, and full-stack products.",
+  openGraph: {
+    title: "Sanjey | Computer Engineering @ NTU",
+    description:
+      "Quant-ready systems, hackathon builds, and production-minded software projects.",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sanjey | Computer Engineering @ NTU",
+    description:
+      "Quant-ready systems, hackathon builds, and production-minded software projects.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
