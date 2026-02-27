@@ -53,6 +53,15 @@ const projects = [
     tag: "Software Engineering",
     link: "",
   },
+  {
+    name: "QAI Ventures Quantum Hackathon",
+    stack: "Quantum Hackathon Build",
+    impact:
+      "Built and submitted a project for the QAI Ventures Quantum Hackathon as part of rapid prototyping and emerging-tech exploration.",
+    metric: "Hackathon participation",
+    tag: "Quantum",
+    link: "https://github.com/sanjey99/quantum_hackathon",
+  },
 ];
 
 const experience = [
