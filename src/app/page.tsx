@@ -86,7 +86,7 @@ export default function Home() {
     <div className="min-h-screen pb-20">
       <header className="sticky top-0 z-50 border-b border-white/10 bg-[#06080dcc] backdrop-blur-md">
         <div className="container flex h-16 items-center justify-between">
-          <p className="font-semibold tracking-tight">Sanjey 🌚</p>
+          <p className="font-semibold tracking-tight">Sanjey | Computer Engineering @ NTU</p>
           <nav className="hidden gap-6 text-sm text-white/80 md:flex">
             <a href="#projects">Projects</a>
             <a href="#experience">Experience</a>
