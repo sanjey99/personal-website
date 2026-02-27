@@ -1,66 +1,27 @@
-const projects = [
+const pinnedProjects = [
   {
     name: "Polymarket Arbitrage Bot",
     stack: "Python, Risk Engine, CLOB Integration, Telegram Controls",
     impact:
       "Built a paper-first, risk-controlled trading system with canary execution gates, telemetry, and command-based controls.",
-    metric: "Live canary + control bot",
-    tag: "Trading Systems",
+    proof: "Technical depth: execution controls, kill-switches, telemetry pipeline.",
     link: "https://github.com/sanjey99/polymarket-arbitrage-bot",
-  },
-  {
-    name: "HarvestChain",
-    stack: "React, Tailwind, Vite, Flask, Python, MongoDB, XRPL, Solidity",
-    impact:
-      "Global 5th at APRU x Google Tech Policy Hackathon 2025; built SSI-enabled blockchain flow for fairer fish price locking.",
-    metric: "Global 5th (APRU x Google)",
-    tag: "Hackathon",
-    link: "https://github.com/sanjey99/harvestchain",
   },
   {
     name: "PRISM (HacX 2025)",
     stack: "React, Node.js, Express, TypeScript, Socket.IO",
     impact:
-      "2nd place at HacX 2025 (HTX x Microsoft); real-time prison transport management with telemetry and audit logging.",
-    metric: "2nd place @ HacX 2025",
-    tag: "GovTech / IoT",
+      "Engineered a full-stack prison transport management system with real-time vehicle and inmate telemetry.",
+    proof: "Award proof: 2nd place at HacX 2025 (HTX x Microsoft).",
     link: "https://github.com/sanjey99/PRISM-hacx",
   },
   {
-    name: "Intern Analytics Project",
-    stack: "Python, Pandas, NumPy, Excel",
+    name: "HarvestChain",
+    stack: "React, Tailwind, Vite, Flask, Python, MongoDB, XRPL, Solidity",
     impact:
-      "Built internship analytics pipelines and workflow visualizations, contributing to a 30% systems-efficiency improvement.",
-    metric: "30% efficiency improvement",
-    tag: "Internship",
-    link: "",
-  },
-  {
-    name: "WorldQuant Championship 2025",
-    stack: "Alpha Modelling, Backtesting",
-    impact:
-      "Top 20% + Gold Award globally with 10,000 points; optimized alpha signals with decay, neutralization, and risk controls.",
-    metric: "Top 20% + Gold",
-    tag: "Quant",
-    link: "",
-  },
-  {
-    name: "HomeCast",
-    stack: "Software Engineering Project, Web Platform, API Integration",
-    impact:
-      "Built a real-estate style platform that pulls property and amenity APIs to support broker-like discovery and filtering.",
-    metric: "API-driven property discovery",
-    tag: "Software Engineering",
-    link: "",
-  },
-  {
-    name: "QAI Ventures Quantum Hackathon",
-    stack: "Quantum Hackathon Build",
-    impact:
-      "Built and submitted a project for the QAI Ventures Quantum Hackathon as part of rapid prototyping and emerging-tech exploration.",
-    metric: "Hackathon participation",
-    tag: "Quantum",
-    link: "https://github.com/sanjey99/quantum_hackathon",
+      "Built a blockchain solution focused on fairer fish pricing and financial equity for fisherfolk.",
+    proof: "Business/User impact: reduced volatility + middleman exploitation model.",
+    link: "https://github.com/sanjey99/harvestchain",
   },
 ];
 
@@ -70,14 +31,21 @@ const experience = [
     org: "Rohde & Schwarz Asia",
     period: "May 2025 – Jul 2025",
     detail:
-      "Built Python analytics pipelines with Pandas/NumPy and improved systems efficiency by 30% with statistical analysis + visualization.",
+      "Built Python analytics pipelines (Pandas/NumPy) and improved system efficiency by 30% through statistical analysis and visualisation.",
   },
   {
     role: "Freelance Coding & Robotics Instructor",
     org: "Empire Code",
     period: "May 2024 – May 2025",
     detail:
-      "Delivered coding lessons to classes up to 38 students and ran weekly robotics sessions through project-based learning.",
+      "Delivered coding/robotics lessons for classes up to 38 students and led project-based weekly training sessions.",
+  },
+  {
+    role: "Financial Controller, Hall 10 TOP Main Comm",
+    org: "NTU",
+    period: "Sep 2025 – Present",
+    detail:
+      "Managed a $10,000 budget for a 200-participant orientation and enforced transparent tracking + reimbursement controls.",
   },
 ];
 
@@ -90,6 +58,7 @@ export default function Home() {
           <nav className="hidden gap-6 text-sm text-white/80 md:flex">
             <a href="#projects">Projects</a>
             <a href="#experience">Experience</a>
+            <a href="#now">Now</a>
             <a href="#contact">Contact</a>
           </nav>
         </div>
@@ -100,34 +69,32 @@ export default function Home() {
           <div className="glass grid w-full max-w-6xl overflow-hidden rounded-3xl md:grid-cols-2">
             <div className="p-8 md:p-12">
               <p className="mb-3 text-sm uppercase tracking-[0.2em] text-cyan-200/80">
-                Computer Engineering @ NTU
+                Recruiter-focused Portfolio
               </p>
-              <h1 className="text-4xl font-semibold leading-tight md:text-6xl">
-                Builds that ship.
+              <h1 className="text-4xl font-semibold leading-tight md:text-6xl" style={{ fontFamily: "Georgia, ui-serif, serif" }}>
+                Building reliable systems
                 <br />
-                Signal that compounds.
+                for real-world impact.
               </h1>
               <p className="mt-5 max-w-xl text-white/80 md:text-lg">
-                I build quant-ready systems, automation workflows, and full-stack
-                products with measurable outcomes.
+                NTU Computer Engineering undergraduate focused on quant-ready tooling,
+                full-stack systems, and high-impact project execution.
               </p>
-              <div className="mt-7 flex flex-wrap gap-2 text-xs text-cyan-100">
-                {[
-                  "Quant Systems",
-                  "Backend",
-                  "Automation",
-                  "Data",
-                  "Product Delivery",
-                ].map((chip) => (
-                  <span
-                    key={chip}
-                    className="rounded-full border border-cyan-300/30 px-3 py-1"
-                  >
-                    {chip}
-                  </span>
-                ))}
+
+              <div className="mt-5 rounded-xl border border-cyan-300/30 bg-cyan-400/10 px-4 py-3 text-sm text-cyan-100">
+                Open to internships: <strong>May–Dec 2026</strong> and <strong>May–Jul 2027</strong>
+              </div>
+
+              <div className="mt-7 flex flex-wrap gap-3 text-sm">
+                <a className="rounded-lg border border-cyan-300/40 px-4 py-2 text-cyan-100 hover:bg-cyan-300/10" href="/Sanjey_Resume.pdf" target="_blank" rel="noreferrer">
+                  View Resume
+                </a>
+                <a className="rounded-lg border border-white/30 px-4 py-2 text-white/90 hover:bg-white/10" href="#projects">
+                  View Projects
+                </a>
               </div>
             </div>
+
             <div className="relative min-h-[320px] bg-gradient-to-br from-[#121a30] via-[#121a2b] to-[#211536] p-6">
               <div className="flex h-full items-center justify-center rounded-2xl border border-white/20 bg-gradient-to-b from-[#111a31] to-[#0a1020] p-4">
                 <div className="monolith-shell">
@@ -135,16 +102,13 @@ export default function Home() {
                   <div className="absolute left-0 right-0 top-3 text-center font-mono text-[11px] text-cyan-200/80">
                     ORDER BOOK MONOLITH
                   </div>
-
                   <div className="order-layer top-[18%] bg-cyan-300/45" style={{ animationDelay: "0s" }} />
                   <div className="order-layer top-[24%] bg-cyan-300/35" style={{ animationDelay: "0.2s" }} />
                   <div className="order-layer top-[30%] bg-cyan-300/25" style={{ animationDelay: "0.35s" }} />
-
                   <div className="absolute left-[10%] right-[10%] top-[44%] h-[2px] bg-white/35" />
                   <div className="absolute left-[10%] right-[10%] top-[46%] text-center font-mono text-[11px] text-white/70">
-                    spread + edge detection
+                    discovery + execution discipline
                   </div>
-
                   <div className="order-layer top-[58%] bg-violet-300/25" style={{ animationDelay: "0.1s" }} />
                   <div className="order-layer top-[64%] bg-violet-300/35" style={{ animationDelay: "0.25s" }} />
                   <div className="order-layer top-[70%] bg-violet-300/45" style={{ animationDelay: "0.4s" }} />
@@ -154,80 +118,51 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="py-14">
-          <div className="glass rounded-3xl p-6 md:p-10">
-            <p className="text-xs uppercase tracking-[0.2em] text-cyan-200/80">Cinematic Story</p>
-            <h2 className="mt-3 text-3xl font-semibold">From market noise to disciplined execution</h2>
-            <div className="mt-8 grid gap-6 md:grid-cols-4">
-              {[
-                ["01", "Noise", "High-volume, conflicting signals."],
-                ["02", "Discovery", "Order flow reveals structure."],
-                ["03", "Edge", "Probability imbalance detected."],
-                ["04", "Execution", "Risk-first, controlled action."],
-              ].map(([idx, t, d]) => (
-                <div key={idx} className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                  <p className="font-mono text-xs text-cyan-200/80">{idx}</p>
-                  <p className="mt-2 font-semibold">{t}</p>
-                  <p className="mt-1 text-sm text-white/70">{d}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         <section id="projects" className="py-14">
-          <h2 className="mb-6 text-3xl font-semibold">Featured Projects</h2>
-          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {projects.map((p) => (
-              <article
-                key={p.name}
-                className="glass rounded-2xl p-5 transition-all duration-200 hover:-translate-y-1 hover:border-cyan-300/30 hover:shadow-[0_0_0_1px_rgba(56,189,248,0.2)]"
-              >
-                <div className="mb-3 flex items-center justify-between gap-2">
-                  <span className="rounded-full border border-cyan-300/30 px-2 py-0.5 text-[10px] uppercase tracking-wider text-cyan-100/90">
-                    {p.tag}
-                  </span>
-                  <span className="text-[11px] text-white/60">{p.metric}</span>
-                </div>
+          <h2 className="mb-6 text-3xl font-semibold" style={{ fontFamily: "Georgia, ui-serif, serif" }}>Pinned Projects</h2>
+          <div className="grid gap-4 md:grid-cols-3">
+            {pinnedProjects.map((p) => (
+              <article key={p.name} className="glass rounded-2xl p-5 transition-all duration-200 hover:-translate-y-1 hover:border-cyan-300/30">
                 <h3 className="text-xl font-semibold">{p.name}</h3>
                 <p className="mt-2 text-sm text-cyan-100/80">{p.stack}</p>
                 <p className="mt-3 text-sm text-white/85">{p.impact}</p>
-                {p.link ? (
-                  <a
-                    href={p.link}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="mt-4 inline-block text-sm text-cyan-200 underline underline-offset-4"
-                  >
-                    View project
-                  </a>
-                ) : (
-                  <p className="mt-4 text-xs text-white/50">Link available on request</p>
-                )}
+                <p className="mt-3 text-xs text-white/60">{p.proof}</p>
+                <a href={p.link} target="_blank" rel="noreferrer" className="mt-4 inline-block text-sm text-cyan-200 underline underline-offset-4">
+                  View project
+                </a>
               </article>
             ))}
           </div>
         </section>
 
         <section id="experience" className="py-14">
-          <h2 className="mb-6 text-3xl font-semibold">Experience</h2>
+          <h2 className="mb-6 text-3xl font-semibold" style={{ fontFamily: "Georgia, ui-serif, serif" }}>Experience & Leadership</h2>
           <div className="space-y-4">
             {experience.map((e) => (
               <article key={e.role} className="glass rounded-2xl p-5">
                 <p className="text-lg font-semibold">{e.role}</p>
-                <p className="text-sm text-cyan-100/80">
-                  {e.org} · {e.period}
-                </p>
+                <p className="text-sm text-cyan-100/80">{e.org} · {e.period}</p>
                 <p className="mt-2 text-sm text-white/85">{e.detail}</p>
               </article>
             ))}
           </div>
+          <p className="mt-5 text-sm text-white/65">
+            Relevant coursework: Data Structures, Software Engineering, Algorithms Analysis, Computer Networks, Statistics & Probability.
+          </p>
+        </section>
+
+        <section id="now" className="py-14">
+          <h2 className="mb-4 text-3xl font-semibold" style={{ fontFamily: "Georgia, ui-serif, serif" }}>Now</h2>
+          <div className="glass rounded-2xl p-5 text-sm text-white/85">
+            Building execution-safe trading tooling, refining portfolio systems, and preparing for high-impact internship opportunities.
+          </div>
         </section>
 
         <section id="contact" className="py-14">
-          <h2 className="mb-4 text-3xl font-semibold">Contact</h2>
+          <h2 className="mb-4 text-3xl font-semibold" style={{ fontFamily: "Georgia, ui-serif, serif" }}>Contact</h2>
           <div className="glass rounded-2xl p-5 text-sm text-white/85">
             <p>Email: sanjeychrysh@gmail.com</p>
+            <p>Email (NTU): sanjeyan001@e.ntu.edu.sg</p>
             <p>GitHub: github.com/sanjey99</p>
             <p>LinkedIn: linkedin.com/in/sanjey99</p>
             <p>Location: Singapore</p>

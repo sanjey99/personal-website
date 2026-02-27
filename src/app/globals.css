@@ -88,3 +88,10 @@ a {
 @media (max-width: 768px) {
   .glass { backdrop-filter: blur(4px); }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .monolith-scan,
+  .order-layer {
+    animation: none !important;
+  }
+}
