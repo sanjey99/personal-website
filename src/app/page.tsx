@@ -161,8 +161,8 @@ export default function Home() {
         <section id="contact" className="py-14">
           <h2 className="mb-4 text-3xl font-semibold" style={{ fontFamily: "Georgia, ui-serif, serif" }}>Contact</h2>
           <div className="glass rounded-2xl p-5 text-sm text-white/85">
-            <p>Email: sanjeychrysh@gmail.com</p>
             <p>Email (NTU): sanjeyan001@e.ntu.edu.sg</p>
+            <p>Email: sanjeychrysh@gmail.com</p>
             <p>GitHub: github.com/sanjey99</p>
             <p>LinkedIn: linkedin.com/in/sanjey99</p>
             <p>Location: Singapore</p>
